@@ -2,7 +2,7 @@
 
 This public repository is the complete transport origin for LisaOS system and
 application updates. GitHub Pages serves the small signed channel metadata at
-`https://updates.lisaos.dev/v1/`; immutable payload storage is provided by
+`https://update.lisaos.dev/v1/`; immutable payload storage is provided by
 GitHub Releases in this repository.
 
 The repository contains only compiled release artifacts, signed public
