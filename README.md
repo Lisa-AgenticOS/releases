@@ -2,12 +2,13 @@
 
 This public repository is the complete transport origin for LisaOS system and
 application updates. GitHub Pages serves the small signed channel metadata at
-`https://update.lisaos.dev/v1/`; immutable payload storage is provided by
+`https://os.lisaos.dev/channel/v1/`; immutable payload storage is provided by
 GitHub Releases in this repository.
 
 The repository contains only compiled release artifacts, signed public
-metadata, checksums, SBOM/provenance records, and the Pages channel trees under
-`v1/`. LisaOS source code and private signing keys do not belong here.
+metadata, checksums, SBOM/provenance records, the Pages channel trees under
+`channel/v1/`, and immutable objects under `releases/`. LisaOS source code and
+private signing keys do not belong here.
 
 Release families are independent:
 
@@ -17,8 +18,8 @@ Release families are independent:
 
 Existing release tags and assets are immutable. A channel advances only after
 every planned release asset has been uploaded and verified; one final commit
-then atomically replaces the selected lineage's signed metadata under
-`v1/<channel>/<architecture>/<edition>/`. The Pages branch and GitHub's asset
+then atomically replaces the selected lineage's signed metadata beneath
+`channel/v1/<channel>/`. The Pages branch and GitHub's asset
 CDN are untrusted transport. Threshold-signed OS metadata and detached-signed
 app manifests authenticate all bytes on the device before staging or
 activation.
@@ -29,4 +30,4 @@ repositories; this public origin accepts only compiled artifacts and public
 verification material.
 
 Project source and development issues live in the repositories under the
-[Lisa-AgenticOS organization](https://github.com/Lisa-AgenticOS).
+[LisaOS-dev organization](https://github.com/LisaOS-dev).
